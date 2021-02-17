@@ -6,4 +6,6 @@ COPY . /toph
 
 WORKDIR /toph
 
+RUN pip install -r requirements.txt
+
 CMD [ "python", "toph" ]

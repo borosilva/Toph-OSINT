@@ -10,4 +10,4 @@ run-docker: build-image
 run:
 	python3 toph
 
-.PHONY: install test
+.PHONY: install-assets build-image run-docker run
