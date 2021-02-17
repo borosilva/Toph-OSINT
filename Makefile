@@ -13,4 +13,4 @@ run:
 test:
 	pytest ./toph/tests/
 
-.PHONY: install-assets build-image run-docker run
+.PHONY: install-assets build-image run-docker run test
