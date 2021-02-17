@@ -11,6 +11,6 @@ run:
 	python3 toph
 
 test:
-	pytest ./toph/tests/
+	pytest --cov=toph toph/tests/
 
 .PHONY: install-assets build-image run-docker run test
