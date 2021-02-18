@@ -8,7 +8,7 @@ run-docker: build-image
 	docker run --rm --tty --interactive toph-osint
 
 run:
-	python3 toph
+	python3 -m toph
 
 test:
 	pytest --cov=toph toph/tests/

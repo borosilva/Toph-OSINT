@@ -1,4 +1,4 @@
+from toph.banner import banner
 
 def run():
-    print("Hola Mundo.")
-    return("Hola Mundo.")
+    banner.printBanner()
