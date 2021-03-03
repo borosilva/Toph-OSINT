@@ -1,14 +1,21 @@
-from toph.common import exceptions
+from toph.common import exceptions, prints, config
+from toph.target import target
+from simple_term_menu import TerminalMenu
+
 
 def printMenu():
-	print("")
-	print("------------------------------------------------------------------------")
-	print("--- 1. Only one target                                               ---")
-	print("--- 0. Exit                                                          ---")
-	print("------------------------------------------------------------------------")
-	print("")
 	try:
-		selection = int(input("Select 1 or 0: "))
-		return selection
+		menuOptionsConfig = config.getMenuOptions()
+		menuOptions = TerminalMenu(menuOptionsConfig, title="Select one option:")
+		selectionIndex = menuOptions.show()
+		selectionMenu(selectionIndex)
 	except ValueError:
 		exceptions.printException(__name__)
+
+def selectionMenu(selectionNumber):
+	try:
+		if selectionNumber == 0:
+			target.onlyOneTargetMenu()
+	except ValueError:
+		exceptions.printException(__name__)
+
