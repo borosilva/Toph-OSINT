@@ -1,7 +1,7 @@
 from toph.common import exceptions, validations, prints, config
 from toph.menu import menu
 from simple_term_menu import TerminalMenu
-from toph.open_sources import email_rep
+from toph.open_sources.email_rep import email_rep
 
 def onlyOneTargetMenu():
     try:
