@@ -1,11 +1,11 @@
-{
-    "optionsMenu" : [
+class menuOptions:
+    optionsMenu = [
         "Only one target",
         "Exit"
-    ],
-    "optionsTarget" : [
+    ]
+
+    optionsTarget = [
         "Email",
         "User Name",
         "Back"
     ]
-}
