@@ -1,13 +1,14 @@
-from toph.common import exceptions, prints, config
+from toph.common import exceptions
+from toph.config.menu import menuOptions
 from toph.target import target
 from simple_term_menu import TerminalMenu
 
 
 def printMenu():
 	try:
-		menuOptionsConfig = config.getMenuOptions()
-		menuOptions = TerminalMenu(menuOptionsConfig, title="Select one option:")
-		selectionIndex = menuOptions.show()
+		menuOptionsConfig = menuOptions.optionsMenu
+		menuOptionsTermnial = TerminalMenu(menuOptionsConfig, title="Select one option:")
+		selectionIndex = menuOptionsTermnial.show()
 		selectionMenu(selectionIndex)
 	except ValueError:
 		exceptions.printException(__name__)
