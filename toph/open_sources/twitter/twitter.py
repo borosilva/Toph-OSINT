@@ -1,7 +1,5 @@
 from toph.common import exceptions
 from toph.open_sources.twitter.client import twitter_client
-import numpy as np
-import pandas as pd
 
 def checkTwitterByEmail(email):
     try:
