@@ -1,11 +1,13 @@
-from toph.common import exceptions, validations, prints, config
+from toph.common import exceptions, validations, prints
+from toph.config.menu import menuOptions
 from toph.menu import menu
 from simple_term_menu import TerminalMenu
 from toph.open_sources.email_rep import email_rep
+from toph.open_sources.twitter import twitter
 
 def onlyOneTargetMenu():
     try:
-        targetOptionsConfig = config.getTargetOptions()
+        targetOptionsConfig = menuOptions.optionsTarget
         targetOptions = TerminalMenu(
             targetOptionsConfig, title="Select one target type:")
         selectionIndex = targetOptions.show()
@@ -24,18 +26,23 @@ def onlyOneTargetEmail():
     try:
         email = str(input("Email: "))
         isValidEmail = validations.validateFormatEmail(email)
+
         if isValidEmail:
             email_rep.checkEmailRep(email)
         else:
             messageNotValid = " Email is not valid "
             print("\n", messageNotValid.center(40, '*'), "\n")
             onlyOneTargetMenu()
+
     except ValueError:
         exceptions.printException(__name__)
 
 def onlyOneTargetUserName():
     try:
-        prints.clearPrint()
-        print("User name target WIP")
+        TITLE = "USER NAME DATA"
+        username = str(input("User Name: "))
+        
+        prints.titlePrint(TITLE)
+        twitter.checkTwitterByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
