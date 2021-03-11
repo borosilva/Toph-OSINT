@@ -6,18 +6,24 @@ from requests import get
 
 def getData(username):
     try:
-        TWITTER_URL = getenv("TWITTER_URL")
+        #TODO descomentar cuando se solucione error 
+        # TWITTER_URL = getenv("TWITTER_URL")
 
-        url = TWITTER_URL + username
-        html = get(url).text
-        soup = BeautifulSoup(html, "html.parser")
-        for text in soup.findAll("h1"):
-            text = regex.removeTags(str(text))
-            print(text)
-            if "Sorry" in text or "Lo sentimos," in text:
-                    prints.notFoundPrint("Twitter", username)
-            else:
-                prints.foundPrint("Twitter", username)
+        # url = TWITTER_URL + username
+
+        # html = get(url)
+        # parsedXml = BeautifulSoup(html.content, "html.parser")
+
+        # for text in parsedXml.findAll("h1"):
+        #     print(text)
+        #     text = regex.removeTags(str(text))
+        #     print(text)
+        #     if "Sorry" in text or "Lo sentimos," in text:
+        #             prints.notFoundPrint("Twitter", username)
+        #     else:
+        #         prints.foundPrint("Twitter", username)
+
+        prints.notFoundPrint("Twitter", "not available")
 
     except ValueError:
         exceptions.printException(__name__)
