@@ -10,8 +10,8 @@ def titlePrint(source):
 def infoPrint(key, value):
     print((colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + "{}").format(key.upper(), value))
 
-def foundPrint(source, url):
-    print((colors.colors.green + "[FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + "{}").format(source, url))
+def foundPrint(source, username, url):
+    print((colors.colors.green + "[FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} " + colors.colors.normal + " {} ").format(source, username, url))
 
 def notFoundPrint(source, url):
-    print((colors.colors.alert + "[NOT FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + "{}").format(source, url))
+    print((colors.colors.alert + "[NOT FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} ").format(source, url))
