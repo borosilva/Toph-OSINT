@@ -4,6 +4,7 @@ from toph.menu import menu
 from simple_term_menu import TerminalMenu
 from toph.open_sources.email_rep import email_rep
 from toph.open_sources.instagram import instagram
+from toph.open_sources.facebook import facebook
 
 def onlyOneTargetMenu():
     try:
@@ -43,6 +44,7 @@ def onlyOneTargetUserName():
         username = str(input("User Name: "))
         
         prints.titlePrint(TITLE)
-        instagram.checkInstagramByUserName(username)
+        instagram.checkByUserName(username)
+        facebook.checkByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
