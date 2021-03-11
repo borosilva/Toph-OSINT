@@ -3,7 +3,7 @@ from toph.config.menu import menuOptions
 from toph.menu import menu
 from simple_term_menu import TerminalMenu
 from toph.open_sources.email_rep import email_rep
-from toph.open_sources.twitter import twitter
+from toph.open_sources.instagram import instagram
 
 def onlyOneTargetMenu():
     try:
@@ -43,6 +43,6 @@ def onlyOneTargetUserName():
         username = str(input("User Name: "))
         
         prints.titlePrint(TITLE)
-        twitter.checkTwitterByUserName(username)
+        instagram.checkInstagramByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
