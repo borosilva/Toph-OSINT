@@ -1,7 +1,7 @@
 from toph.common import exceptions
 from toph.open_sources.instagram.client import instagram_client
 
-def checkInstagramByUserName(username):
+def checkByUserName(username):
     try:
         instagram_client.getData(username)
 
