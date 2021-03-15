@@ -3,6 +3,8 @@ from toph.config import colors
 from os import getenv
 from bs4 import BeautifulSoup
 from requests import get
+from json import loads
+from types import SimpleNamespace
 
 def getData(username):
     try:
@@ -12,19 +14,18 @@ def getData(username):
         url = PINTEREST_URL + username
         html = get(url, params=PARAMS).text
         parsedHtml = BeautifulSoup(html, "html.parser")
-        findedText = findTagText(parsedHtml)
+        findedId = parsedHtml.find(id='initial-state')
+        removedTag = regex.removeTags(str(findedId))
+        convertedObject = convertToObject(removedTag)
 
-        if "404 Not Found" in findedText:
-            prints.notFoundPrint("Pinterest", username)
+        if convertedObject.resourceResponses[0].response.code == 0:
+            prints.foundPrint("Pinterest",username,url)
         else:
-            prints.foundPrint("Pinterest", username, url)
+            prints.notFoundPrint("Pinterest", username)
+
     except ValueError:
         exceptions.printException(__name__)
 
-def findTagText(parsedHtml):
-    try:
-        for text in parsedHtml.findAll("title"):
-            text = regex.removeTags(str(text))
-            return text
-    except ValueError:
-        exceptions.printException(__name__)
+def convertToObject(jsonValue):
+    convertedObject = loads(jsonValue, object_hook=lambda d: SimpleNamespace(**d))
+    return convertedObject
