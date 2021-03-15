@@ -6,6 +6,7 @@ from toph.open_sources.email_rep import email_rep
 from toph.open_sources.instagram import instagram
 from toph.open_sources.facebook import facebook
 from toph.open_sources.twitter import twitter
+from toph.open_sources.youtube import youtube
 
 def onlyOneTargetMenu():
     try:
@@ -48,5 +49,6 @@ def onlyOneTargetUserName():
         instagram.checkByUserName(username)
         facebook.checkByUserName(username)
         twitter.checkByUserName(username)
+        youtube.checkByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
