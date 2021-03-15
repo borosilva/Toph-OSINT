@@ -12,7 +12,6 @@ def getData(username):
         url = INSTAGRAM_URL + username
         html = get(url, params=PARAMS).text
         parsedHtml = BeautifulSoup(html, "html.parser")
-
         findedText = findTagText(parsedHtml)
 
         if username in findedText:

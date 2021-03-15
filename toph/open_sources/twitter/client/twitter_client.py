@@ -6,24 +6,29 @@ from requests import get
 
 def getData(username):
     try:
-        #TODO descomentar cuando se solucione error 
+        # Problem with selenium on mac
+        # TODO 
         # TWITTER_URL = getenv("TWITTER_URL")
+        # PARAMS = dict(lang='en-US')
 
         # url = TWITTER_URL + username
+        # html = get(url, params=PARAMS).text
+        # parsedHtml = BeautifulSoup(html, "html.parser")
+        # findedText = findTagText(parsedHtml)
+        # print(findedText)
+        # if username in findedText:
+        #     prints.foundPrint("Twitter", username, url)
+        # else:
+        #     prints.notFoundPrint("Twitter", username)
+        prints.notFoundPrint("Twitter", username)
+    except ValueError:
+        exceptions.printException(__name__)
 
-        # html = get(url)
-        # parsedXml = BeautifulSoup(html.content, "html.parser")
-
-        # for text in parsedXml.findAll("h1"):
-        #     print(text)
-        #     text = regex.removeTags(str(text))
-        #     print(text)
-        #     if "Sorry" in text or "Lo sentimos," in text:
-        #             prints.notFoundPrint("Twitter", username)
-        #     else:
-        #         prints.foundPrint("Twitter", username)
-
-        prints.notFoundPrint("Twitter", "not available")
-
+def findTagText(parsedHtml):
+    try:
+        for text in parsedHtml.findAll("title"):
+            print(text)
+            text = regex.removeTags(str(text))
+            return text
     except ValueError:
         exceptions.printException(__name__)

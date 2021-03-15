@@ -1,7 +1,7 @@
 from toph.common import exceptions
 from toph.open_sources.twitter.client import twitter_client
 
-def checkTwitterByEmail(email):
+def checkByEmail(email):
     try:
         username = getUserNameEmail(email)
         twitter_client.getData(username)
@@ -9,7 +9,7 @@ def checkTwitterByEmail(email):
     except ValueError:
         exceptions.printException(__name__)
 
-def checkTwitterByUserName(username):
+def checkByUserName(username):
     try:
         twitter_client.getData(username)
 
