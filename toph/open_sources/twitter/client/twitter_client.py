@@ -6,7 +6,7 @@ from requests import get
 
 def getData(username):
     try:
-        # Problem with selenium on mac
+        # Problem with selenium on mac: https://github.com/mozilla/geckodriver/releases
         # TODO 
         # TWITTER_URL = getenv("TWITTER_URL")
         # PARAMS = dict(lang='en-US')
