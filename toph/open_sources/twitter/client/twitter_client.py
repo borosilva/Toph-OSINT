@@ -20,7 +20,7 @@ def getData(username):
         #     prints.foundPrint("Twitter", username, url)
         # else:
         #     prints.notFoundPrint("Twitter", username)
-        prints.notFoundPrint("Twitter", username)
+        prints.notFoundPrint("Twitter", "search is not available")
     except ValueError:
         exceptions.printException(__name__)
 
