@@ -12,6 +12,7 @@ from toph.open_sources.flickr import flickr
 from toph.open_sources.medium import medium
 from toph.open_sources.github import github
 from toph.open_sources.about_me import about_me
+from toph.open_sources.spotify import spotify
 
 def onlyOneTargetMenu():
     try:
@@ -60,5 +61,6 @@ def onlyOneTargetUserName():
         medium.checkByUserName(username)
         github.checkByUserName(username)
         about_me.checkByUserName(username)
+        spotify.checkByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
