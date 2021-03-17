@@ -1,7 +1,7 @@
 remove-assets:
 	pip3 uninstall -r requirements.txt -y
 
-install-assets:
+install-assets: remove-assets
 	pip3 install -r requirements.txt
 
 build-image: install-assets
