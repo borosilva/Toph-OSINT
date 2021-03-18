@@ -14,6 +14,7 @@ from toph.open_sources.github import github
 from toph.open_sources.about_me import about_me
 from toph.open_sources.spotify import spotify
 from toph.open_sources.telegram import telegram
+from toph.open_sources.tripadvisor import tripadvisor
 
 def onlyOneTargetMenu():
     try:
@@ -64,5 +65,6 @@ def onlyOneTargetUserName():
         about_me.checkByUserName(username)
         spotify.checkByUserName(username)
         telegram.checkByUserName(username)
+        tripadvisor.checkByUserName(username)
     except ValueError:
         exceptions.printException(__name__)
