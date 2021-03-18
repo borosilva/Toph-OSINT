@@ -15,3 +15,6 @@ def foundPrint(source, username, url):
 
 def notFoundPrint(source, url):
     print((colors.colors.alert + "[NOT FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} " + "\n").format(source, url))
+
+def notAvailablePrint(source, url):
+    print((colors.colors.fail + "[NOT AVAILABLE] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} " + "\n").format(source, url))
