@@ -6,8 +6,8 @@ from requests import get
 
 def getData(username):
     try:
-        # Problem with selenium on mac: https://github.com/mozilla/geckodriver/releases
         # TODO 
+        # Problem with selenium on mac: https://github.com/mozilla/geckodriver/releases
         # TWITTER_URL = getenv("TWITTER_URL")
         # PARAMS = dict(lang='en-US')
 
@@ -20,7 +20,7 @@ def getData(username):
         #     prints.foundPrint("Twitter", username, url)
         # else:
         #     prints.notFoundPrint("Twitter", username)
-        prints.notFoundPrint("Twitter", "search is not available")
+        prints.notAvailablePrint("Twitter", "search is not available")
     except ValueError:
         exceptions.printException(__name__)
 
