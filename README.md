@@ -16,6 +16,7 @@ Se utilizó `python` versión `3.9`
 * Instalar pip 
     - En linux y macOs (Guía de ejemplo): https://pip.pypa.io/en/stable/installing/
 
+### Uso:
 1. Instalación de dependencias:
 
 ```
