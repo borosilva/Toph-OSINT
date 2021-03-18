@@ -12,10 +12,10 @@ def getData(username):
         url = TELEGRAM_URL + username
         html = get(url, params=PARAMS).text
         parsedHtml = BeautifulSoup(html, "html.parser")
-        findedClass = parsedHtml.find_all("div", {"class": "tgme_page_post"})
+        findedClass = parsedHtml.find_all("div", {"class": "tgme_page_extra"})
         removedTag = regex.removeTags(str(findedClass))
 
-        if len(removedTag) > 0:
+        if len(removedTag) > 2:
             prints.foundPrint("Telegram",username,url)
         else:
             prints.notFoundPrint("Telegram", username)
