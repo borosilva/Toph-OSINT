@@ -2,19 +2,9 @@ from toph.common import exceptions, validations, prints
 from toph.config.menu import menuOptions
 from toph.menu import menu
 from simple_term_menu import TerminalMenu
-from toph.open_sources.email_rep import email_rep
-from toph.open_sources.instagram import instagram
-from toph.open_sources.facebook import facebook
-from toph.open_sources.twitter import twitter
-from toph.open_sources.youtube import youtube
-from toph.open_sources.pinterest import pinterest
-from toph.open_sources.flickr import flickr
-from toph.open_sources.medium import medium
-from toph.open_sources.github import github
-from toph.open_sources.about_me import about_me
-from toph.open_sources.spotify import spotify
-from toph.open_sources.telegram import telegram
-from toph.open_sources.tripadvisor import tripadvisor
+from toph.open_sources import open_sources
+
+
 
 def onlyOneTargetMenu():
     try:
@@ -39,7 +29,7 @@ def onlyOneTargetEmail():
         isValidEmail = validations.validateFormatEmail(email)
 
         if isValidEmail:
-            email_rep.checkEmailRep(email)
+            open_sources.searchOnAllOpenSourcesByEmail(email)
         else:
             messageNotValid = " Email is not valid "
             print("\n", messageNotValid.center(40, '*'), "\n")
@@ -54,17 +44,6 @@ def onlyOneTargetUserName():
         username = str(input("User Name: "))
         
         prints.titlePrint(TITLE)
-        instagram.checkByUserName(username)
-        facebook.checkByUserName(username)
-        twitter.checkByUserName(username)
-        youtube.checkByUserName(username)
-        pinterest.checkByUserName(username)
-        flickr.checkByUserName(username)
-        medium.checkByUserName(username)
-        github.checkByUserName(username)
-        about_me.checkByUserName(username)
-        spotify.checkByUserName(username)
-        telegram.checkByUserName(username)
-        tripadvisor.checkByUserName(username)
+        open_sources.searchOnAllOpenSourcesByUsername(username)
     except ValueError:
         exceptions.printException(__name__)
