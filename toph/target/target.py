@@ -4,8 +4,6 @@ from toph.menu import menu
 from simple_term_menu import TerminalMenu
 from toph.open_sources import open_sources
 
-
-
 def onlyOneTargetMenu():
     try:
         targetOptionsConfig = menuOptions.optionsTarget
