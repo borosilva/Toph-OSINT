@@ -1,3 +1,7 @@
+[![](https://img.shields.io/badge/license-MIT-green)](https://img.shields.io/badge/license-MIT-green)
+[![](https://img.shields.io/badge/python-3.9-blue)](https://img.shields.io/badge/python-3.9-blue)
+
+
 # Toph-OSINT
 Herramienta OSINT. WIP.
 
