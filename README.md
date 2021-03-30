@@ -27,9 +27,3 @@ make install-assets
 ```
 make run
 ```
-
-## Pruebas unitarias
-Las pruebas se inician con:
-```
-make test
-```
