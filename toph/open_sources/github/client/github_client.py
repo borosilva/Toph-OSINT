@@ -15,7 +15,7 @@ def getData(username):
         if "Not Found" in parsedHtml:
             prints.notFoundPrint("GitHub", username)
         else:
-            prints.foundPrint("GitHub", username, url)
+            prints.foundPrint("GitHub", url)
     except ValueError:
         exceptions.printException(__name__)
 

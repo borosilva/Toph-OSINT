@@ -17,7 +17,7 @@ def getData(username):
         if "No se pudo encontrar la página | Facebook" in findedText:
             prints.notFoundPrint("Facebook", username)
         else:
-            prints.foundPrint("Facebook", username, url)
+            prints.foundPrint("Facebook", url)
 
     except ValueError:
         exceptions.printException(__name__)

@@ -17,7 +17,7 @@ def getData(username):
         if "404 Not Found" in findedText:
             prints.notFoundPrint("YouTube", username)
         else:
-            prints.foundPrint("YouTube", username, url)
+            prints.foundPrint("YouTube", url)
     except ValueError:
         exceptions.printException(__name__)
 

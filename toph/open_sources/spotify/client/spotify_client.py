@@ -15,7 +15,7 @@ def getData(username):
         findedText = findTagText(parsedHtml)
         if findedText:
             if username in findedText:
-                prints.foundPrint("Spotify", username, url)               
+                prints.foundPrint("Spotify", url)               
         else:
             prints.notFoundPrint("Spotify", username)
     except ValueError:

@@ -19,7 +19,7 @@ def getData(username):
         convertedObject = convertToObject(removedTag)
 
         if convertedObject.resourceResponses[0].response.code == 0:
-            prints.foundPrint("Pinterest",username,url)
+            prints.foundPrint("Pinterest",url)
         else:
             prints.notFoundPrint("Pinterest", username)
 

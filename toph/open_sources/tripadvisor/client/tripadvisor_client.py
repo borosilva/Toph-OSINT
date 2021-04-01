@@ -17,7 +17,7 @@ def getData(username):
         if "  404 Not Found - Tripadvisor " in findedText:
             prints.notFoundPrint("Tripadvisor", username)
         else:
-            prints.foundPrint("Tripadvisor", username, url)
+            prints.foundPrint("Tripadvisor", url)
 
     except ValueError:
         exceptions.printException(__name__)

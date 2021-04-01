@@ -15,7 +15,7 @@ def getData(username):
         findedText = findTagText(parsedHtml)
 
         if len(findedText) > 6:
-            prints.foundPrint("Flickr", username, url)
+            prints.foundPrint("Flickr", url)
         else:
             prints.notFoundPrint("Flickr", username)
     except ValueError:

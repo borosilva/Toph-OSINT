@@ -16,7 +16,7 @@ def getData(username):
         removedTag = regex.removeTags(str(findedClass))
 
         if len(removedTag) > 2:
-            prints.foundPrint("Telegram",username,url)
+            prints.foundPrint("Telegram",url)
         else:
             prints.notFoundPrint("Telegram", username)
 

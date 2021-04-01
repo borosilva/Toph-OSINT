@@ -15,7 +15,7 @@ def getData(username):
         findedText = findTagText(parsedHtml)
 
         if len(findedText) >8:
-            prints.foundPrint("About.me", username, url)
+            prints.foundPrint("About.me", url)
         else:
             prints.notFoundPrint("About.me", username)
     except ValueError:
