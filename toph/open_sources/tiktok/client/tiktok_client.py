@@ -10,7 +10,7 @@ def printData(username):
 
         url = TIKTOK_URL + username
         if len(findedText) > 6:
-            prints.foundPrint("TikTok", url)               
+            prints.foundPrint("TikTok", url)
         else:
             prints.notFoundPrint("TikTok", username)
     except ValueError:
