@@ -11,7 +11,7 @@ def infoPrint(key, value):
     print(("\r" + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + "{}").format(key.upper(), value))
 
 def foundPrint(source, username, url):
-    print(("\r" + colors.colors.green + "[FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} " + colors.colors.normal + " {} " + "\n").format(source, username, url))
+    print(("\r" + colors.colors.green + "[FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal +  " {} " + "\n").format(source, url))
 
 def notFoundPrint(source, url):
     print(("\r" + colors.colors.alert + "[NOT FOUND] " + colors.colors.blue + colors.colors.bold + " {}: " + colors.colors.normal + " {} " + "\n").format(source, url))
