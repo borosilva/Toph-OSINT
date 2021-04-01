@@ -4,3 +4,4 @@ simple-term-menu==0.10.5
 requests==2.25.1
 python-dotenv==0.15.0
 beautifulsoup4==4.9.3
+halo==0.0.31

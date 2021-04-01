@@ -3,6 +3,7 @@ from toph.config.menu import menuOptions
 from toph.menu import menu
 from simple_term_menu import TerminalMenu
 from toph.open_sources import open_sources
+from halo import Halo
 
 def onlyOneTargetMenu():
     try:
@@ -40,8 +41,12 @@ def onlyOneTargetUserName():
     try:
         TITLE = " SEARCH BY USER NAME"
         username = str(input("User Name: "))
+        spinner = Halo(text='Loading', spinner='dots')
         
         prints.titlePrint(TITLE)
+        
+        spinner.start()
         open_sources.searchOnAllOpenSourcesByUsername(username)
+        spinner.stop()
     except ValueError:
         exceptions.printException(__name__)
