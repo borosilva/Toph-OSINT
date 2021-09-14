@@ -7,14 +7,11 @@ def getData(username):
     try:
         PINTEREST_URL = getenv("PINTEREST_URL")
         html = htmlClient.getHtml(PINTEREST_URL, username)
-
-        findedId = html.find(id='initial-state')
-        removedTag = regex.removeTags(str(findedId))
-        convertedObject = convertToObject(removedTag)
+        findedText = texts.findTagText(html, "title")
         url = PINTEREST_URL + username
-
-        if convertedObject.resourceResponses[0].response.code == 0:
-            prints.foundPrint("Pinterest",url)
+        
+        if username in findedText:
+            prints.foundPrint("Pinterest", url)
         else:
             prints.notFoundPrint("Pinterest", username)
 
