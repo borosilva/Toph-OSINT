@@ -1,6 +1,5 @@
 from toph.open_sources.email_rep import email_rep
 
-from toph.open_sources.instagram import instagram
 from toph.open_sources.facebook import facebook
 from toph.open_sources.youtube import youtube
 from toph.open_sources.pinterest import pinterest
@@ -15,7 +14,6 @@ def searchOnAllOpenSourcesByEmail(email):
     email_rep.checkEmailRep(email)
 
 def searchOnAllOpenSourcesByUsername(username):
-    instagram.checkByUserName(username)
     facebook.checkByUserName(username)
     youtube.checkByUserName(username)
     pinterest.checkByUserName(username)
