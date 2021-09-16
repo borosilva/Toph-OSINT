@@ -13,10 +13,8 @@ def onlyOneTargetMenu():
         selectionIndex = targetOptions.show()
 
         if selectionIndex == 0:
-            onlyOneTargetEmail()
-        if selectionIndex == 1:
             onlyOneTargetUserName()
-        if selectionIndex == 2:
+        if selectionIndex == 1:
             prints.clearPrint()
             menu.printMenu()
     except ValueError:

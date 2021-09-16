@@ -5,7 +5,6 @@ class menuOptions:
     ]
 
     optionsTarget = [
-        "Email",
         "User Name",
         "Back"
     ]
